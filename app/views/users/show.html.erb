@@ -1,2 +1,7 @@
 <h1>mypage</h1>
 <p>sample</p>
+<%= month_calendar do |date| %>
+  <%= date %>
+	  <%= button_to '予約', books_new_path(book: {date: date}) %>
+	  
+<% end %>

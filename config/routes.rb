@@ -3,8 +3,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: "home#index"
-  
+  post '/books/new', to: 'books#input_time'
+  post '/books', to: 'books#create'
   get "users/:id" => "users#show", as: :mypage
+  
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
